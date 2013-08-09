@@ -13,9 +13,8 @@ class brooklynAdminForm extends ThemeForm
 	 */
 	protected $name = "Brooklyn";
 	protected $thumbnail = "brooklyn.png";
-	protected $version = "2.1.0";
+	protected $version = 3;
 	protected $description = "Our default template, suitable for any type of business.";
-	protected $noupdate = true;
 	protected $credit = "Designed by LightSpeed";
 	protected $parent; //Used when a theme is a copy of another theme to control inheritance
 
