@@ -17,6 +17,7 @@ class brooklynAdminForm extends ThemeForm
 	protected $description = "Our default template, suitable for any type of business.";
 	protected $credit = "Designed by LightSpeed";
 	protected $parent; //Used when a theme is a copy of another theme to control inheritance
+	protected $bootstrap = "bootstrap3";
 
 	/*
 	 * Define any keys here that should be available for the theme
