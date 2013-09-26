@@ -13,7 +13,6 @@ file, and leaving this file untouched. This file contains no coloring informatio
 */
 
 /**** Global settings ******/
-#container { max-width: 960px; margin: auto;}
 body { font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal; }
 h1, h2, h3, h4, h5, h6 {
     font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -27,7 +26,7 @@ select, input[type="text"], input[type="password"], input[type="email"],input[ty
 input { -webkit-appearance: none;  }
 input[type="checkbox"] { width: 20px; height: 20px; border: 0px; -webkit-appearance: checkbox; }
 input[type="radio"] { width: 18px; height: 18px; border: 0px; float:left; clear:left; -webkit-appearance: radio; margin-top: 3px; margin-right: 3px;}
-legend  { margin-bottom: 4px; text-transform: uppercase;  border: none; }
+legend  { margin-bottom: 4px; border: none; }
 .left { text-align: left;}
 .center { text-align: center;}
 .right { text-align: right;}
@@ -52,7 +51,7 @@ a:hover {  text-decoration: none;   }
 #langdrop select { font-size: 0.7em; height: 33px;}
 
 /***** Login/Logout button *****/
-#login, #login a {  height: 24px; padding-top: 12px; padding-bottom: 10px; text-align: center; margin-bottom: 10px; text-decoration: none; text-transform: uppercase; cursor: pointer; }
+#login, #login a {  height: 24px; padding-top: 12px; padding-bottom: 10px; text-align: center; margin-bottom: 10px; text-decoration: none; text-transform: uppercase; cursor: pointer; min-height: 47px;}
 #login img { margin-right: 10px; vertical-align: middle; height: 27px; }
 
 /***** Language options *****/
@@ -61,37 +60,22 @@ a:hover {  text-decoration: none;   }
 /***** Navigation (Products dropdown) and tabs *****/
 #menubar { margin-bottom: 10px; height: 47px; border-bottom: 1px dotted #aaaaaa; }
 #menutabs { margin-top: 3px; margin-left: -26px;}
-.menutab {  font-size: 1em; font-weight: 600; text-align: center; text-transform: uppercase; cursor: pointer; }
+.menutab {  font-size: 1.1em; font-weight: 600; text-align: center; text-transform: uppercase; cursor: pointer; list-style: none; list-style-type: none; }
 .menutab a {  color: #444444; }
 .innertab a { text-decoration: none;}
 .menuheight { height: 48px; }
 .menuunderline { }
 .menuunderline:hover { border-bottom: 5px solid #000000;}
 
-#nav_products { font-weight: 600; height: 47px; text-decoration: none; z-index: 2000; border-bottom: 0px; text-align: left; cursor: pointer; margin-left: 9px; margin-top: 3px;}
-#nav_products .productstab { height: 45px; margin-top: 2px;}
-#nav_products .dropspace { margin-top: 10px; } /* push dropdown menu down from underneath PRODUCTS tab */
- /* all this to create dropdown and popout menu effects */
-#nav_products a { display: block; margin-right: 3px; padding: 0 0 0 0 ; text-decoration: none;  z-index: 2000;}
-#nav_products ul { border: none; line-height: 1; list-style: none; list-style-type: none; margin: 0px 0 0px 0px; padding-bottom: 20px;z-index: 2000;}
-#nav_products ul a {  border-bottom: 1px dotted #cccccc; z-index: 2000;}
-#nav_products li { float: left; width: 10em; height: 30px;  z-index: 2000; line-height:19px !important; }
-#nav_products li ul { left: -999em; position: absolute; width: 10em; height: 29px; z-index: 2000;}
-#nav_products li ul ul { margin: -33px 0 0 180px; z-index: 2000;}
-#nav_products ul li ul li a { font-size: 1em; font-weight: 700; padding: 8px 10px; width: 160px; border-bottom: 1px dotted #cccccc; z-index: 2000;}
-#nav_products ul li ul li a:hover { border-bottom: 1px dotted #cccccc; z-index: 2000;}
-#nav_products li:hover ul ul, #nav_products li:hover ul ul ul, #nav_products li.sfhover ul ul, #nav_products li.sfhover ul ul ul { left: -999em; z-index: 2000;}
-#nav_products li:hover ul, #nav_products li li:hover ul, #nav_products li li li:hover ul, #nav_products li.sfhover ul, #nav_products li li.sfhover ul, #nav_products li li li.sfhover ul, #nav_products li:hover ul, #nav_products li:hover ul, #nav_products li.sfhover ul, #nav_products li:hover ul, #nav_products li li:hover ul, #nav_products li.sfhover ul, #nav_products li li.sfhover ul {     left: auto; z-index: 2000;}
-
-#nav_products .arrow { margin: 1px 0 0 10px; }
-
+.products { font-weight: 600; margin-top: 12px; margin-bottom: 4px;font-size: 1.1em;}
+#menutree { font-size: 0.8em; line-height: 1.6; list-style: none; list-style-type: none; margin: 0px 0 0px 0px; padding-left: 5px;}
 
 /***** Typeahead search *****/
 .dropdown-menu .active > a, .dropdown-menu .active > a:hover { color: white; background-color: #000000; background-image: linear-gradient(to bottom, #666666, #474747);}
 .dropdown-menu strong { color: #bababa; }
 
 /***** Breadcrumbs ******/
-.breadcrumbs { text-transform: uppercase;  padding-bottom: 15px; padding-top: 8px; margin-bottom: 10px; clear:both; border-bottom: 1px dotted #aaaaaa;}
+.breadcrumbs { padding-bottom: 15px; padding-top: 8px; margin-bottom: 10px; clear:both; border-bottom: 1px dotted #aaaaaa;}
 .breadcrumbs .homebutton { padding-bottom: 0px; margin: auto; height: 29px; width: 25px; float: left; }
 .breadcrumbs img { width: 16px; height: 29px; float: left; margin-top: -5px; margin-right: 3px; }
 .breadcrumbs a {  }
@@ -102,7 +86,7 @@ a:hover {  text-decoration: none;   }
 #gridheader h1 { line-height: 40px; margin-top: 0px; margin-bottom: 3px; }
 .subcategories { margin-left: 10px;margin-bottom: 15px;}
 .subcategories a { text-decoration: underline; padding-right: 10px;}
-.product_cell { min-height: 300px !important; vertical-align: baseline; cursor: pointer; margin-bottom: 10px; margin-left: 5px  !important;}
+.product_cell { min-height: 300px !important; vertical-align: baseline; cursor: pointer; margin-bottom: 10px;padding-left:0px;padding-right:0px;}
 .product_cell_graphic { height: 225px; margin: auto;}
 .product_cell img { max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; margin-top: 10px; padding-top: 20px;}
 .product_cell_label  { clear: both; margin: auto;  padding-top: 0; padding-left: 2px; padding-right: 2px; text-transform:uppercase; height: 65px; vertical-align: bottom;  text-align: center;}
@@ -119,8 +103,8 @@ a:hover {  text-decoration: none;   }
 
 /***** Pagination *****/
 #paginator {  display: block; font-weight: 700; text-align: center; text-transform:uppercase; margin-left: auto; margin-right: auto;}
-#pagination a {text-decoration: none;   }
-#pagination li.page.selected, #pagination li.page.selected a { }
+#pagination a {text-decoration: none;   border:none; }
+#pagination li.page.selected, #pagination li.page.selected a { border:none; }
 #pagination li { display: inline-block; list-style: none; margin: 0; overflow: hidden; padding: 8px 5px 8px 5px;  }
 
 
@@ -331,7 +315,7 @@ a:hover {  text-decoration: none;   }
 
 /***** Footy *****/
 #footer { clear: both;}
-#footer .addresshours { height: 70px; margin: 30px 0px 30px 0; padding-top: 30px; padding-bottom: 7px; line-height: 1.2em;}
+#footer .addresshours { height: 105px; margin: 30px 0px 30px 0; padding-top: 30px; padding-bottom: 7px; line-height: 1.2em;}
 #footer .addresshours .indentl { margin-left: 40px; margin-right: -40px; text-transform: uppercase; text-align: left;}
 #footer .addresshours .indentr { margin-right: 20px; margin-left: -20px; text-transform: uppercase;}
 #footer .bottomtabs { text-transform: uppercase; text-align: center; font-size: 0.9em;  }
@@ -363,42 +347,16 @@ a:hover {  text-decoration: none;   }
 .midrow { margin-bottom: 12px;}
 .shortrow { margin-bottom: 2px;}
 
+
+
 /***** Global adjustments as we resize down ******/
-@media only screen and (max-width: 960px) { /*iPad and below */
-    body { font-size: 0.9em; }
-    h1, h2, h3 { font-size: 1.3em; }
-    select, input[type="text"], input[type="password"], input[type="email"] { max-width: 190px; }
-    #product_details img { max-width: 90%;}s
-    #product_details #SelectSize { float: left; margin-right: 2px;}
-    #checkout #CustomerContactBillingAddressState { width: 75px;}
-    #checkout #CustomerContactBillingAddressZip { width: 75px; }
-    #checkout #CustomerContactShippingAddressState { width: 75px;}
-    #checkout #CustomerContactShippingAddressZip { width: 75px; }
-    #searchentry .search_box input { width: 100px; }
-    #menubar, #menubar a { font-size: 0.9em; }
+@media only screen and (max-width: 991px) { /*iPad and below */
     #headerimage img { max-width: 530px; }
-    #shoppingcarttop .minicart_desc { font-size: 0.7em; }
-    #shoppingcarttop .minicart_price { font-size: 0.7em;}
-    #shoppingcarttop .minicart_image { max-width: 30px;}
-    .product_detail_image img { max-width: 200px; }
-    .checkoutarrow { display: none; }
-    #nav_products .arrow { margin: 1px 0 0 3px; }
-    #footer .addresshours .indentl { margin-left: 20px; margin-right: -20px;}
-    #footer .addresshours .indentr { margin-right: 20px; margin-left: -20px;}
-    #contact-form textarea { width: 300px;}
+    .menutab { font-size: 0.9em;}
 
 }
 @media only screen and (max-width: 767px) {/* iPhone */
-    select, input[type="text"], input[type="password"], input[type="email"] { max-width: 200px; }
-    #searchentry .search_box input { width: 75px; }
     #headerimage img { max-width: 360px; }
-    .menuheight { max-width: 330px; }
-    #menubar { border-bottom: 0px;}
-    .spyglass { display: none; }
-    .products_slider_theme .leftpadding { padding-left: 0px; }
-    .products_slider, .products_slider_theme { display: none; }
-    #footer .addresshours { height: 160px; }
+
 }
-
-
 

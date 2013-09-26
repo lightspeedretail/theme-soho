@@ -19,6 +19,7 @@ class brooklynAdminForm extends ThemeForm
 	protected $parent; //Used when a theme is a copy of another theme to control inheritance
 	protected $bootstrap = "bootstrap3";
 
+
 	/*
 	 * Define any keys here that should be available for the theme
 	 * These can be accessed via Yii::app()->theme->config->keyname
@@ -51,7 +52,7 @@ class brooklynAdminForm extends ThemeForm
 	public $SLIDER_IMAGE_WIDTH = 90;
 	public $PRODUCTS_PER_PAGE = 12;
 
-	public $disableGridRowDivs = false;
+	public $disableGridRowDivs = true;
 	//public $testvar;
 
 
