@@ -69,6 +69,26 @@ a:hover {  text-decoration: none;   }
 
 .products { font-weight: 600; margin-top: 12px; margin-bottom: 4px;font-size: 1.1em;}
 #menutree { font-size: 0.8em; line-height: 1.6; list-style: none; list-style-type: none; margin: 0px 0 0px 0px; padding-left: 5px;}
+.shoppingnavigation { text-align: center; font-size: 0.9em; padding-top: 10px;}
+.shoppingnavigation a { font-weight: 600; text-transform: uppercase; padding-left: 10px; padding-right: 10px;}
+
+/***** Products dropdown *****/
+#nav_products { font-weight: 600; height: 47px; text-decoration: none; z-index: 2000; border-bottom: 0px; text-align: left; cursor: pointer; margin-left: 9px; margin-top: 3px;}
+#nav_products .productstab { height: 45px; margin-top: 2px;}
+#nav_products .dropspace { margin-top: 10px; } /* push dropdown menu down from underneath PRODUCTS tab */
+/* all this to create dropdown and popout menu effects */
+#nav_products a { display: block; margin-right: 3px; padding: 0 0 0 0 ; text-decoration: none;  z-index: 2000;}
+#nav_products ul { border: none; line-height: 1; list-style: none; list-style-type: none; margin: 0px 0 0px 0px; padding-bottom: 20px;z-index: 2000;}
+#nav_products ul a {  border-bottom: 1px dotted #cccccc; z-index: 2000;}
+#nav_products li { float: left; width: 10em; height: 30px;  z-index: 2000; line-height:19px !important; }
+#nav_products li ul { left: -999em; position: absolute; width: 10em; height: 29px; z-index: 2000;}
+#nav_products li ul ul { margin: -33px 0 0 180px; z-index: 2000;}
+#nav_products ul li ul li a { font-size: 1em; font-weight: 700; padding: 8px 10px; width: 160px; border-bottom: 1px dotted #cccccc; z-index: 2000;}
+#nav_products ul li ul li a:hover { border-bottom: 1px dotted #cccccc; z-index: 2000;}
+#nav_products li:hover ul ul, #nav_products li:hover ul ul ul, #nav_products li.sfhover ul ul, #nav_products li.sfhover ul ul ul { left: -999em; z-index: 2000;}
+#nav_products li:hover ul, #nav_products li li:hover ul, #nav_products li li li:hover ul, #nav_products li.sfhover ul, #nav_products li li.sfhover ul, #nav_products li li li.sfhover ul, #nav_products li:hover ul, #nav_products li:hover ul, #nav_products li.sfhover ul, #nav_products li:hover ul, #nav_products li li:hover ul, #nav_products li.sfhover ul, #nav_products li li.sfhover ul {     left: auto; z-index: 2000;}
+
+#nav_products .arrow { margin: 1px 0 0 10px; }
 
 /***** Typeahead search *****/
 .dropdown-menu .active > a, .dropdown-menu .active > a:hover { color: white; background-color: #000000; background-image: linear-gradient(to bottom, #666666, #474747);}
@@ -121,8 +141,9 @@ a:hover {  text-decoration: none;   }
 
 /***** Mini Cart (right side shopping cart) *****/
 #shoppingcart { text-transform: uppercase; padding-left: 4px; padding-right: 4px;  clear:both;}
-#shoppingcarttop .title a { font-size: 1.1em; height: auto; min-height: 220px; width: 100%; z-index: 500; padding-top: 10px; padding-bottom: 10px; }
-#shoppingcarttop .carticon { float: right; background: url(images/shoppingcartlight.png) no-repeat top right; height: 26px; width: 26px; line-height: 16px; }
+#shoppingcart .navigation { text-transform: uppercase; padding-left: 4px; padding-right: 4px;  clear:both;}
+#shoppingcarttop .title a { font-size: 0.9em; height: auto; min-height: 220px; width: 100%; z-index: 500; padding-top: 10px; padding-bottom: 10px; }
+#shoppingcart .carticon { float: right; background: url(images/shoppingcartlight.png) no-repeat top right; height: 26px; width: 26px; line-height: 16px; margin-right: 12px; }
 #shoppingcarttop .minicart_itemlist { margin-top: 15px; margin-bottom: 5px; }
 #shoppingcarttop .minicart_item { padding-top: 15px; padding-bottom: 25px; border-top: 1px dotted #bbbbbb;  height: 30px; line-height: 1em; clear: both;}
 #shoppingcarttop .minicart_item.hidden { height: 0px;  visibility: hidden; }
@@ -133,9 +154,9 @@ a:hover {  text-decoration: none;   }
 #shoppingcarttop .minicart_qty { clear: left; font-size: 0.9em; font-weight: 400;}
 #shoppingcarttop .minicart_item a { margin-top: 5px;}
 #shoppingcarttop .emptymessage { height: 113px; margin: 0px auto 0 auto; padding: 45px 20px 0 12px; text-align: center;  }
-#shoppingcartbottom { border-top: 1px dotted #bbbbbb;  height: 30px; line-height: 1em; clear: both; padding-top: 20px; padding-bottom: 20px;}
-#shoppingcartbottom .cart_label  { padding-bottom: 2px; float:left; font-size: 0.95em; text-align: right; font-weight: 500;}
-#shoppingcartbottom .cart_price { padding-bottom: 2px;float:left; font-size: 1.1em; text-align: right; font-weight: 500;}
+#shoppingcartbottom { min-height: 35px; clear: both;}
+#shoppingcartbottom .cart_label  { text-transform: none; font-size: 0.9em; line-height: 2em;}
+#shoppingcartbottom .cart_price { font-size: 0.9em; text-align: right; line-height: 2em; }
 #shoppingcartbottom .subtotallabel { font-weight: 600; }
     /* checkout button */
 #shoppingcartcheckout {  clear:both;  height: 24px; padding-top: 12px; padding-bottom: 10px; text-align: center; margin-bottom: 10px; cursor: pointer; text-transform: uppercase; }
@@ -217,7 +238,8 @@ a:hover {  text-decoration: none;   }
 
 /***** Checkout page and Registration Page *****/
 #checkout .row-fluid { padding-bottom: 10px; }
-#checkout label { margin-bottom: 0px;}
+#checkout label { display: block; margin-bottom: 0px;}
+#checkout label, input, button, select, textarea { font-size: 14px; font-weight: normal;line-height: 20px; }
 #checkout legend, #contact-form legend, #orderdisplay legend  { margin-bottom: 4px; text-transform: uppercase;  font-size: 1em; }
 #checkout label, #contact-form label { text-transform: uppercase; font-size: 0.9em; font-weight: normal;}
 #checkout .warning, #checkout .errorMessage, #contact-form .warning, #contact-form .errorMessage {  text-transform: uppercase; font-size: 0.8em; line-height: 14px;}
@@ -253,10 +275,14 @@ a:hover {  text-decoration: none;   }
 #checkout .addressblock { padding-bottom: 12px; height: 120px; }
 #checkout .addresslabel { font-weight: bold; padding-bottom: 6px; }
 #checkout #checkoutSubmitButton { width: 120px; }
-
+#checkout textarea {background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;}
 #redirect { margin-top: 80px; margin-bottom: 80px; }
 /***** Login popup box login_box.tpl.php *****/
 #LoginForm { margin-bottom: 0px; }
+#LoginForm label {display: block; margin-bottom: 5px;}
 .login label { text-transform: uppercase; font-size: 0.9em; font-weight: normal;}
 .login a {font-size: 0.6em; }
 .login input[type="text"],.login input[type="password"],.login input[type="text"]:focus { text-transform: none; padding: 2px; margin: 0px; width: 200px;}

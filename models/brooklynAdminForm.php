@@ -55,6 +55,8 @@ class brooklynAdminForm extends ThemeForm
 	public $disableGridRowDivs = true;
 	//public $testvar;
 
+	public $menuposition = "left";
+
 
 	/**
 	 * Declares the validation rules.
@@ -63,6 +65,7 @@ class brooklynAdminForm extends ThemeForm
 	{
 		return array(
 			array('CHILD_THEME','required'),
+			array('menuposition','safe'),
 			//array('testvar','required'), //you can also stack items i.e. array('CHILD_THEME,testvar','required'),
 		);
 	}
@@ -77,6 +80,7 @@ class brooklynAdminForm extends ThemeForm
 	{
 		return array(
 			'CHILD_THEME'=>ucfirst(_xls_regionalize('color')).' set',
+			'menuposition'=>'Products menu position',
 		);
 	}
 
@@ -97,6 +101,11 @@ class brooklynAdminForm extends ThemeForm
 					'type'=>'dropdownlist',
 					'items'=>array('light'=>'Light','dark'=>'Dark'),
 				),
+
+//			'menuposition'=>array(
+//					'type'=>'dropdownlist',
+//					'items'=>array('left'=>'Left side','dropdown'=>'Dropdown menu','menubar'=>'Along menubar'),
+//				),
 
 //				'testvar'=>array(
 //					'type'=>'text',
