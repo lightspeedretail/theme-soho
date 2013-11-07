@@ -38,12 +38,18 @@ class brooklynAdminForm extends ThemeForm
 	 */
 	public $CHILD_THEME = "light"; //Required, to be backwards compatible with CHILD_THEME key
 
+	/*
+	 * ATTENTION THEME DESIGNERS: These values below are NOT live, they are defaults. If you are experimenting
+	 * and wish to change these values to see the effect, after changing them here, go into Admin Panel, under
+	 * the Configuration panel for your theme, and click Save. This will write these values to the
+	 * xlsws_module table for your themes, which is where Web Store looks for them at runtime.
+	 */
 	public $CATEGORY_IMAGE_HEIGHT = 180;
 	public $CATEGORY_IMAGE_WIDTH = 180;
 	public $DETAIL_IMAGE_HEIGHT = 256;
 	public $DETAIL_IMAGE_WIDTH = 256;
 	public $LISTING_IMAGE_HEIGHT = 190;
-	public $LISTING_IMAGE_WIDTH = 180;
+	public $LISTING_IMAGE_WIDTH = 190;
 	public $MINI_IMAGE_HEIGHT = 30;
 	public $MINI_IMAGE_WIDTH = 30;
 	public $PREVIEW_IMAGE_HEIGHT = 30;
@@ -56,6 +62,7 @@ class brooklynAdminForm extends ThemeForm
 	//public $testvar;
 
 	public $menuposition = "left";
+	public $column2file = "column2";
 
 
 	/**
@@ -65,7 +72,7 @@ class brooklynAdminForm extends ThemeForm
 	{
 		return array(
 			array('CHILD_THEME','required'),
-			array('menuposition','safe'),
+			array('menuposition,column2file','safe'),
 			//array('testvar','required'), //you can also stack items i.e. array('CHILD_THEME,testvar','required'),
 		);
 	}
@@ -81,6 +88,7 @@ class brooklynAdminForm extends ThemeForm
 		return array(
 			'CHILD_THEME'=>ucfirst(_xls_regionalize('color')).' set',
 			'menuposition'=>'Products menu position',
+			'column2file'=>'Place shopping cart',
 		);
 	}
 
@@ -102,10 +110,10 @@ class brooklynAdminForm extends ThemeForm
 					'items'=>array('light'=>'Light','dark'=>'Dark'),
 				),
 
-//			'menuposition'=>array(
-//					'type'=>'dropdownlist',
-//					'items'=>array('left'=>'Left side','dropdown'=>'Dropdown menu','menubar'=>'Along menubar'),
-//				),
+			'column2file'=>array(
+					'type'=>'dropdownlist',
+					'items'=>array('column2'=>'Left side','column2r'=>'Right side'),
+				),
 
 //				'testvar'=>array(
 //					'type'=>'text',

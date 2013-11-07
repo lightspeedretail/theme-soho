@@ -287,11 +287,10 @@ a:hover {  text-decoration: none;   }
 #LoginForm { margin-bottom: 0px; }
 #LoginForm label {display: block; margin-bottom: 5px;}
 .login label { text-transform: uppercase; font-size: 0.9em; font-weight: normal;}
-.login a {font-size: 0.6em; }
 .login input[type="text"],.login input[type="password"],.login input[type="text"]:focus { text-transform: none; padding: 2px; margin: 0px; width: 200px;}
 #LoginForm label[for=LoginForm_rememberMe] { display: inline; }
 
-.forgotpassword {  }
+.forgotpassword, .forgotpassword a { text-transform: uppercase; font-size: 1.1em; font-weight: normal; }
 
 /***** Sitemap *****/
 #sitemap ul {  margin-left:20px; list-style-type: square; line-height: 20px;}
