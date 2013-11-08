@@ -1,6 +1,6 @@
 <?php
 
-class brooklynAdminForm extends ThemeForm
+class albanyAdminForm extends ThemeForm
 {
 
 	/*
@@ -11,8 +11,8 @@ class brooklynAdminForm extends ThemeForm
 	 *
 	 * for example: echo Yii::app()->theme->info->version
 	 */
-	protected $name = "Brooklyn";
-	protected $thumbnail = "brooklyn.png";
+	protected $name = "Albany";
+	protected $thumbnail = "albany.png";
 	protected $version = 3;
 	protected $description = "Our default template, suitable for any type of business.";
 	protected $credit = "Designed by LightSpeed";
