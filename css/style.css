@@ -19,6 +19,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
+*:focus {
+    outline: 0;
+}
+
 h1 {font-size: 30px;}
 b { font-weight: 700; }
 i { font-style: italic; }
@@ -41,7 +45,7 @@ a:hover {  text-decoration: none;   }
 .smalllightbutton {   height: 18px; padding-top: 4px; padding-bottom: 6px; padding-left: 5px; padding-right: 5px; text-align: center;cursor: pointer; float: left; text-transform: uppercase; font-size: 0.9em;}
 .smalldarkbutton a, .smalllightbutton a {  }
 .label { text-transform: uppercase; }
-.errorMessage  {  text-transform: uppercase; font-size: 0.7em; line-height: 14px; margin: 30px 0;}
+.errorMessage  {  text-transform: uppercase; font-size: 0.7em; line-height: 14px; margin: 15px 0;}
 .popupwide { width: 450px; }
 .popup { width: 350px; }
 .popupsmall { width: 300px; }
@@ -50,7 +54,7 @@ a:hover {  text-decoration: none;   }
 /***** Heady *****/
 #headerimage { }
 #headerimage img {max-width: 100%;}
-#viewport { clear: both; margin-left: -45px; padding-top: 11px;}
+#viewport { clear: both; margin-left: -0px; padding-top: 11px;}
 #langdrop select { font-size: 0.7em; height: 33px;}
 
 
@@ -61,10 +65,13 @@ margin-right: 0px;
 margin-left: 0px;
 }
 
+.col-sm-3 {padding-right: 0;}
+
+.note {margin-left: 25px;}
 
 /***** Login/Logout button *****/
-#login {padding-top: 20px;}
-#login, #login a { text-decoration: none; text-transform: uppercase; font-size: 1em; font-weight: 600; display: block; text-align: center; margin-left: -15px;}
+#login {padding-top: 18px;}
+#login, #login a { text-decoration: none; text-transform: uppercase; font-size: 14px; font-weight: 600; display: block; text-align: center; margin-left: -15px; height: 22px;}
 
 #login img { margin-right: 10px; vertical-align: middle; height: 27px; }
 
@@ -78,7 +85,7 @@ margin-left: 0px;
 #topbar {float: right;}
 li.mainMenuBtn {list-style-type: none; float: left; width: 19%;}
 
-#menubar { margin: -12px 0 -17px 0px; padding: 20px 0px 0 0px; }
+#menubar { margin: 0px 0 -16px 0px; padding: 20px 0px 0 0px; }
 #menubar .col-sm-8 {padding-left: 0px;}
 
 #menutabs { margin-top: 0px; margin-left: -26px;}
@@ -88,7 +95,7 @@ li.mainMenuBtn {list-style-type: none; float: left; width: 19%;}
 .menuheight { height: 48px; }
 
 
-.products { font-weight: 600; margin-top: 20px; font-size: 1.1em; padding: 10px 0 10px 0px; margin-left: -15px; width: 90%; margin-top: 34px;   text-align: center;}
+.products { font-weight: 600;  font-size: 1.1em; padding: 10px; margin-left: -15px; width: 100%; margin-top: 31px;   text-align: center;}
 #menutree { font-size: 0.8em; list-style-type: none; margin-left: -15px; width: 90%;}
 
 .shoppingnavigation {   padding-top: 20px; margin-left: -20px;}
@@ -124,7 +131,7 @@ li.mainMenuBtn {list-style-type: none; float: left; width: 19%;}
 .dropdown-menu strong { color: #bababa; }
 
 /***** Breadcrumbs ******/
-.breadcrumbs { margin: 20px  0 10px -40px; clear:both; border-bottom: 1px dotted #6ACEEB; padding: 20px 0 15px 0px;}
+.breadcrumbs { margin: 20px  0 10px 10px; clear:both; border-bottom: 1px dotted #6ACEEB; padding: 20px 0 15px 0px;}
 .breadcrumbs .homebutton { padding-bottom: 0px; margin: auto; height: 29px; width: 25px; float: left; }
 .breadcrumbs img { width: 16px; height: 29px; float: left; margin-top: -5px; margin-right: 3px; }
 .breadcrumbs a {  }
@@ -134,10 +141,10 @@ li.mainMenuBtn {list-style-type: none; float: left; width: 19%;}
 .col-sm-9 {padding-right: 0px; padding-left: 0px;}
 
 #gridheader { }
-#gridheader h1 { line-height: 40px; margin: 15px 0px 20px 10px; }
+#gridheader h1 { line-height: 40px; margin: 15px 0px 20px 5px; }
 .subcategories { margin-left: 10px;margin-bottom: 15px;}
 .subcategories a { text-decoration: underline; padding-right: 10px;}
-.product_cell { min-height: 300px !important; vertical-align: baseline; cursor: pointer; margin-bottom: 10px;padding-left:0px;padding-right:0px; }
+.product_cell { min-height: 300px !important; vertical-align: baseline; cursor: pointer; margin-bottom: 0px;padding-left:0px;padding-right:0px; }
 .product_cell_graphic { height: 225px; margin: auto;}
 
 .product_cell img { max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; margin-top: 10px; padding-top: 20px;}
@@ -174,10 +181,15 @@ li.mainMenuBtn {list-style-type: none; float: left; width: 19%;}
 
 /***** Advanced Search Page *****/
 
-#advancedsearch label {width: 150px;  float; left; display: block; margin: 30px 0 5px 0;}
+#advancedsearch {margin-bottom: 20px;}
+
+#advancedSearchHeader {padding: 5px 0 0 15px;}
+
+#advancedsearch label { float; left; display: block; margin: 20px 0 5px 0;}
 
 #advancedsearch  #btnSubmit {float: right; margin: -38px 45% 0 0;}
-#AdvancedSearchForm_cat {text-align: center;}
+#AdvancedSearchForm_cat {text-align: center;  padding: 0 10px; border: 1px dotted #295A7F; width: 185px;}
+#advancedsearch .col-sm-9 label {margin-left: 15px;}
 
 /***** Mini Cart (right side shopping cart) *****/
 #shoppingcart { text-transform: uppercase; padding-top: 20px;  clear:both; margin-right: 30px; }
@@ -208,7 +220,8 @@ li.mainMenuBtn {list-style-type: none; float: left; width: 19%;}
 #shoppingcarteditcart .editlink {  margin: auto;  text-align: center; }
 #shoppingcarteditcart .editlink a { margin-top: 20px;  text-decoration: none;}
     /* continue shopping button */
-#shoppingcartcontinue {  height: 40px; padding: 10px;  text-align: center;margin-bottom: 10px; cursor: pointer;  text-transform: uppercase; width: 100%;}
+#shoppingcartcontinue {  height: 40px; padding: 10px; margin: 0 auto 10px auto; cursor: pointer;  text-transform: uppercase; 
+	width: 80px; }
 #shoppingcartcontinue .editlink {  margin: auto;  text-align: center; }
 #shoppingcartcontinue .editlink a { margin-top: 20px;  text-decoration: none;}
 
@@ -236,7 +249,8 @@ li.mainMenuBtn {list-style-type: none; float: left; width: 19%;}
 #genericcart input[type="text"],#genericcart input[type="text"]:focus { font-size: 1.1em; margin-bottom: 7px; border: 3px; text-align: center; padding: 2px; height: 20px;  }
 
 
-
+.cart_qty_box { border: 1px dotted #3DC0DC !important;}
+.cart_qty_box:focus { height: 20px !important;}
 
 
 
@@ -268,8 +282,8 @@ li.mainMenuBtn {list-style-type: none; float: left; width: 19%;}
 .productImage legend {position: absolute; display: none;}
 .productImage img {border: 1px solid #3B4250; width: 258px; }
 
-#product_details .wishlist { padding: 12px 5px 5px 5px;  margin: 0 5px 0 0; text-align: center; cursor: pointer; float: left; height: 50px; width: 100px;}
-#product_details .wishlist a {   text-transform: uppercase; font-size: 1em; padding-top: 15px;}
+#product_details .wishlist { padding: 5px 5px 5px 5px;  margin: 0 5px 0 0; text-align: center; cursor: pointer; float: left; height: 50px; width: 100px;}
+#product_details .wishlist a {   text-transform: uppercase; font-size: 1em; padding-top: 5px;}
 
 
 #product_details .addcart { padding: 12px 5px 5px 5px;  margin: 0 5px 0 0; text-align: center; cursor: pointer; float: left; height: 50px; width: 100px;}
@@ -310,13 +324,13 @@ li.mainMenuBtn {list-style-type: none; float: left; width: 19%;}
 #left {width: 50%; float: left; text-align: center; margin-top: 40px;}
 #right { width: 50%; float: left; margin-top: 40px;}
 .description {padding-left: 5px;}
-.description h2 {font-size: 1.3em; padding: 40px 0 0 5px; text-align: center;}
+.description h2 {font-size: 1.3em; padding: 40px 0 0 5px; text-align: left;}
 .summary {padding: 20px 0 10px 0;}
-#yw1-widget {padding-top: 40px; width: 80%; margin: 0 auto;}
+#yw1-widget {padding: 40px 0 0 35px; width: 95%; }
 
 /***** Checkout page and Registration Page and Contact Page *****/
 
-.registerHeader {padding-left: 15px;}
+.registerHeader {padding-left: 25px;}
 
 input {border: 10px solid #3DC0DC; background-color: #3DC0DC; color: #eee;}
 input:hover, input:focus {border: 10px solid #A2C90A; background-color: #A2C90A; color: #eee;}
@@ -338,10 +352,10 @@ input:hover, input:focus {border: 10px solid #A2C90A; background-color: #A2C90A;
 #contactFormContainer label {margin-left: 15%; }
 
 #contactFormContainer h1 {margin: 20px 0 30px 10px; }
-#contactFormContainer .note {margin-bottom: 20px;}
+#contactFormContainer .note {margin: 10px 0 20px 0;}
 
 #checkout .red,#contact-form .red, .customer_reg_err_msg {  font-size: 1.1em;text-transform: uppercase; }
-#checkout fieldset { border-bottom: 2px dotted #e7e7e7; margin-bottom: 20px; padding-bottom: 10px; }
+#checkout fieldset { border-bottom: 2px dotted #e7e7e7; margin-bottom: 20px; padding: 20px 0; margin-left: 15px;}
 #checkout #Payforms fieldset { border-bottom: none; }
   /* tweaks for specific fields. They all have IDs so it makes it easy */
 #checkout label[for=CheckoutForm_receiveNewsletter], #checkout label[for=CheckoutForm_billingSameAsShipping],
@@ -349,13 +363,13 @@ input:hover, input:focus {border: 10px solid #A2C90A; background-color: #A2C90A;
 #checkout label[for=CustomerAddress_residential], #checkout label[for=Customer_newsletter_subscribe] { display: inline;}
 .rememberMe label { display: inline;}
 
-
+#CheckoutForm_shippingState, #CheckoutForm_billingState, #CheckoutForm_shippingCountry, #CheckoutForm_billingCountry {width: 70%;}
 
 
 #checkout #CheckoutForm_billingAddress1, #checkout #CustomerAddress_address1 { margin-bottom: 3px; }
 #checkout #CheckoutForm_shippingAddress1 { margin-bottom: 3px; }
-#checkout #CheckoutForm_orderNotes { width: 100%;}
-#checkout #CheckoutForm_paymentProvider { width: 340px;}
+#checkout #CheckoutForm_orderNotes { width: 100%; margin-bottom: 20px; margin-left: 10px;}
+#checkout #CheckoutForm_paymentProvider { width: 70%; padding-left: 10px; margin-left: 10px;}
 #checkout #CheckoutForm_cardCVV { width: 70px;}
 #checkout #Payforms .row { margin-left: 0px; }
 #checkout #shippingProvider { width: 200px; min-height: 40px; margin-bottom: 6px;}
@@ -366,13 +380,18 @@ input:hover, input:focus {border: 10px solid #A2C90A; background-color: #A2C90A;
 #checkout #CalculateShippingCtrl { width: 200px; }
 #checkout #recaptcha_response_field { border: 1px; width: 150px; text-transform: none;}
 #checkout #PromoLabel {  }
-#contact-form textarea { width: 80%;}
+#contact-form textarea { width: 100%;}
 #checkout .addressblock { padding-bottom: 12px; height: 120px; }
 #checkout .addresslabel { font-weight: bold; padding-bottom: 6px; }
 
 #checkout textarea {background-color: #9ED7DA; border: 1px dotted #3B4250; }
 
 #redirect { margin-top: 80px; margin-bottom: 80px; }
+
+.myaddress {margin-left: -15px;}
+#CheckoutForm_intShippingAddress {margin-left: 15px;}
+#commentsNote, .success label {margin-left: 10px;}
+
 /***** Login popup box login_box.tpl.php *****/
 #LoginForm { margin-bottom: 0px; }
 #LoginForm label {display: block; margin-bottom: 5px;}
@@ -388,7 +407,9 @@ input:hover, input:focus {border: 10px solid #A2C90A; background-color: #A2C90A;
 #createaccount .row {margin: 10px 0;}
 #Customer_newsletter_subscribe {margin: 20px 0 0 20px;}
 
-.sameAsBilling {margin-bottom: 20px;}
+.sameAsBilling {margin-bottom: 20px; margin-left: 25px;}
+
+.promoCodeLabel {padding: 0 0 10px 10px;}
 
 #ShoppingCart button {color: #eee; background-color: #3B4250; border: 10px solid #3B4250; height: 40px; margin-bottom: 20px; 
 
@@ -400,6 +421,12 @@ input:hover, input:focus {border: 10px solid #A2C90A; background-color: #A2C90A;
 
 
 #ShoppingCart button:hover {color: #eee; background-color: #FF434C; border: 10px solid #FF434C;}
+
+#ShoppingCart .col-xs-6  {text-align: center;}
+
+.termsConditions a {text-decoration: underline;}
+
+#checkout #submitblock  {text-align: center;}
 
 
 /***** wishlist search *****/
@@ -422,13 +449,13 @@ input:hover, input:focus {border: 10px solid #A2C90A; background-color: #A2C90A;
 #orderdisplay input[type="text"],#genericcart input[type="text"]:focus { font-size: 1.1em; margin-bottom: 7px; border: 3px; border-bottom: 1px solid black; text-align: center; padding: 2px; height: 15px; }
 #orderdisplay .qtybox { width: 30px;}
 #orderdisplay fieldset { display:inline-block;  border-bottom: 2px dotted #e7e7e7; }
-.myaddress { margin-left: 0px !important; padding-bottom: 10px !important; height: 125px;}
-.myaddress .default { color: #9c9c9c; font-size: 0.9em; font-style: italic; font-weight: 600;}
+.myaddress { padding-bottom: 10px !important; height: 125px;}
+.myaddress .default { color: #3DC0DC; font-size: 0.9em; font-style: italic; font-weight: 600; }
 
 /***** Order/SRO/Quote Display *****/
 #wishlistdisplay .rowborder { border-bottom: 1px dotted #6ACEEB;}
 #wishlistdisplay .cartlabel { text-transform: uppercase; font-size: 0.9em; font-weight: 600; }
-#wishlistdisplay .event_date { font-size: 0.8em;  margin-bottom: 20px; margin-top: -20px;}
+#wishlistdisplay .event_date { font-size: 0.8em;  margin-bottom: 20px; }
 #wishlistdisplay .qtybox { width: 30px; font-size: 1.1em; margin-bottom: 7px; border: 3px; border-bottom: 1px solid black; text-align: center; padding: 2px; height: 15px;}
 #wishlistdisplay .light { font-weight: 300; }
 #wishlistdisplay .heading { font-size: 1.3em; }
@@ -437,7 +464,7 @@ input:hover, input:focus {border: 10px solid #A2C90A; background-color: #A2C90A;
 #wishlistdisplay .list_itemx {   line-height: 1em;}
 #wishlistdisplay .list_image {float:left;  height: 36px; width: 36px; margin:auto; padding-top: 5px; padding-bottom: 5px; padding-right: 6px;}
 #wishlistdisplay .list_item img {max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; }
-#wishlistdisplay .wishshare { font-size: 0.9em; margin-top: 30px;}
+#wishlistdisplay .wishshare { font-size: 0.9em; margin-top: 30px; margin-bottom: 20px;}
 #wishlistdisplay .addcart {   height: 18px; padding-top: 4px; padding-bottom: 6px; margin-right: 18px; padding-left: 5px; padding-right: 5px; text-align: center;margin-bottom: 10px; cursor: pointer; float: left; text-transform: uppercase; font-size: 0.9em;}
 #wishlistdisplay .addcart a { margin-top: 20px;  text-transform: uppercase; font-size: 0.8em;}
 #wishlistdisplay .sharelist {  height: 18px; padding-top: 4px; padding-bottom: 6px; margin-right: 18px; padding-left: 5px; padding-right: 5px; text-align: center;margin-bottom: 10px; cursor: pointer; float: left; text-transform: uppercase; font-size: 0.9em;font-weight: 600;}
@@ -451,7 +478,7 @@ input:hover, input:focus {border: 10px solid #A2C90A; background-color: #A2C90A;
 #WishlistEditForm_priority { width: 240px; }
 #WishlistEditForm_comment, #Wishlist_registry_description { width: 320px; height: 70px;}
 #btnAddWishList { margin-left: 120px;}
-#btnWishList, #btnSendWishList { margin-left: 125px;}
+#btnWishList, #btnSendWishList { margin: 20px 0 0 125px; }
 #btnWishListDelete { margin-left: 115px; margin-top: 20px;}
 #wishlistdisplay .btnDelete { }
 #ShareForm { width: 300px; margin-bottom: 0px;}
@@ -459,6 +486,7 @@ input:hover, input:focus {border: 10px solid #A2C90A; background-color: #A2C90A;
 #ShareForm_toEmail { width: 290px;}
 #ShareForm_comment { width: 300px; height: 80px; font-size: 0.8em; }
 
+#wishlistdisplay .col-sm-5, #wishlistdisplay .col-sm-10 {padding-left: 0px;}
 
 /***** Footy *****/
 #footer { clear: both; margin-top: -20px;}
@@ -467,7 +495,7 @@ input:hover, input:focus {border: 10px solid #A2C90A; background-color: #A2C90A;
 #footer .addresshours .indentr { margin-right: 20px; margin-left: -20px; text-transform: uppercase;}
 #footer .bottomtabs { text-transform: uppercase; text-align: center; font-size: 0.9em;  }
 #footer .bottomtabs a { font-size: 1.1em; font-weight: 400; }
-#footer .copyright { text-align: center; text-transform: uppercase;  font-size: 0.8em;  }
+#footer .copyright { text-align: center; text-transform: uppercase;  font-size: 0.8em; margin-bottom: 40px; }
 
 /****** jCarousel skin ******/
 /* If you set the slider photo size larger than 170px in Admin Panel, you will need to also adjust the following two lines */
@@ -497,9 +525,22 @@ input:hover, input:focus {border: 10px solid #A2C90A; background-color: #A2C90A;
 .alert-warning {color: #3B4250; border: 1px dotted #6ACEEB; background-color: #F6FAFB; margin-top: 20px;}
 
 
+/****** account areas ******/
 
+#orderdisplay .col-sm-12, #orderdisplay .col-sm-8, #orderdisplay .col-sm-3, #orderdisplay .col-sm-4 {padding-left: 0px;}
+#orderdisplay h1 {padding-bottom: 10px;}
+#orderdisplay .row {padding: 0 0 10px 0;}
 
+#CustomerAddress_state_id {width: 225px;}
 
+.rememberMe {padding-top: 20px;}
+
+.rememberMe label {}
+.rememberMe input {float: left;}
+#defaultShippingAddress {margin-top: -20px; }
+
+.cartNotes {padding-left: 15px;}
+#cartTaxes .col-sm-offset-6 {margin-left: 0%;}
 
 
 
@@ -619,12 +660,21 @@ margin-left: 15%;
 
 #checkout {margin-bottom: 20px;}
 
-#checkoutHeader {padding-left: 20px;}
+#checkoutHeader {padding-left: 25px; font-size: 30px;}
 
-#checkout legend {text-align: left;}
-
-
+#checkout legend {text-align: left; padding-left: 10px;}
 #contact-form label {text-align: right; margin: 10px 0;}
+#passMsg {padding-left: 20px;}
+
+
+/* wishlist page */
+#wishlistForm .row {margin-bottom: 20px;}
+#Wishlist_registry_description, #checkout input#Wishlist_registry_name, #checkout input#Wishlist_event_date {width: 70%;}
+.hasDatepicker {margin-bottom: 20px;}
+
+/* wishlist popup */
+
+#WishitemShareForm input, #WishitemShareForm label { display: block;}
 
 /* footer */
 
@@ -639,15 +689,19 @@ margin-left: 15%;
 /* registration page */
 
 #checkout label { font-size: 0.9em; font-weight: normal; margin: 15px 0 3px 0%; }
-
+.wishlistForm #checkout label { margin: 0px !important; }
 
 #checkout input[type="text"], #checkout input[type="password"], #checkout input[type="email"], #checkout input[type="select"],#checkout input[type="text"]:focus,#checkout input[type="password"]:focus, #checkout input[type="email"]:focus, #checkout input[type="select"]:focus { font-size: 1.2em; border: 7px solid #E5E5E5; text-transform: none; padding: 2px; margin: 0;  }
 
-.submitblock {margin: 20px 0 0 0px; text-align: left;}
+.submitblock {margin: 20px 0 0 0px; text-align: center;}
 
 }
 
 @media (min-width: 768px) and (max-width: 1199px) { 
+
+.container {
+max-width: 100%;
+}	
 
 #menubar {padding: 10px 0px 5px 0px; margin-bottom: -20px;}
 
@@ -662,6 +716,8 @@ margin-left: 15%;
  }
 
 @media (max-width: 767px) {
+
+.container { max-width: 100%; padding-right: 0px; padding-left: 0px;}
 
 .mainClm, .leftSidebar {float: none;}
 .leftSidebar {width: 80%; margin-left: 10%;}
@@ -683,7 +739,7 @@ li.mainMenuBtn {float: none; width: 100%; text-align: center; padding: 3px 0; ma
 
 .products, #menutree {text-align: center; }
 
-#viewport { margin: -15px 0 0 0px;}
+#viewport { margin: -25px 0 0 0px;}
 
 .note {margin-top: 20px;}
 #contact-form input[type="text"], #contact-form input[type="password"], #contact-form input[type="email"], #contact-form input[type="select"],#contact-form input[type="text"]:focus,#contact-form input[type="password"]:focus, #contact-form input[type="email"]:focus, #contact-form input[type="select"]:focus { width: 70%; margin-left: 15% !important; }
@@ -691,7 +747,7 @@ li.mainMenuBtn {float: none; width: 100%; text-align: center; padding: 3px 0; ma
 #contact-form textarea { width: 70%; margin-left: 15% !important; }
 
 
-.breadcrumbs { margin: 15px 0 5px 0px; padding: 10px 0 15px 0px; }
+.breadcrumbs { margin: 15px 0 5px 0px; padding: 10px 0 15px 10px; }
 
 #contactFormContainer h1 {margin: 20px 0; text-align: center;}
 
@@ -706,6 +762,8 @@ li.mainMenuBtn {float: none; width: 100%; text-align: center; padding: 3px 0; ma
 /* product page */
 
 #product_details h1 {margin: 15px 0 25px 0;}
+
+.description h2 {text-align: center; }
 
 #yw1-widget {padding: 20px 0; }
 
@@ -729,8 +787,11 @@ li.mainMenuBtn {float: none; width: 100%; text-align: center; padding: 3px 0; ma
   .note {text-align: center; margin: 10px 0 5px 0;}
 #passMsg {text-align: center;}
 
+#checkoutHeader {padding-left: 0px; text-align: center;}
 
 #checkout input[type="text"], #checkout input[type="password"], #checkout input[type="email"], #checkout input[type="select"],#checkout input[type="text"]:focus,#checkout input[type="password"]:focus, #checkout input[type="email"]:focus, #checkout input[type="select"]:focus {width: 70%; margin-left: 15%;}
+
+#CheckoutForm_shippingState, #CheckoutForm_billingState, #CheckoutForm_shippingCountry, #CheckoutForm_billingCountry, #CheckoutForm_paymentProvider {margin-left: 15%;}
 
 #genericcart .cartHeaderLeft { width: 100px;}
 
@@ -740,19 +801,40 @@ li.mainMenuBtn {float: none; width: 100%; text-align: center; padding: 3px 0; ma
 .registerHeader {padding-left: 0px; text-align: center;}
 #checkout legend { text-align: center; }
  .submitblock { text-align: center; margin: 20px 0;}
-#checkout  label {text-align: center; margin: 0;}
+#checkout  label {text-align: center; margin: 0; width: 70%; margin-left: 15%;}
 #commentsNote label {text-align: center; margin: 0;}
 
 #wishlistdisplay .col-sm-6 {padding-left: 0px;}
 
+
+.promoCodeLabel, .sameAsBilling,  {text-align: center;}
+
+.promoCodeLabel {text-align: center; padding: 0 0 10px 0px;}
+
+.myaddress {margin-left: 15%;}
+
+
+/* advanced search page */
+#advancedSearchHeader {text-align: center;}
+#advancedsearch label {text-align: center;}
+#advancedsearch input, #AdvancedSearchForm_cat {width: 70%; margin-left: 15%;}
+
+#advancedsearch input#btnSubmit {margin: 30px 0 10px 15%; width: 70%; float: none;}
+
+.errorMessage {text-align: center;}
+
+/* wishlist page */
+#wishlistTitle {text-align: center;}
+#Wishlist_registry_description, #Wishlist_ship_option {margin-left: 15%; width: 70%;}
 }
+
 
 
 
 @media (max-width: 500px) {
 
 #shoppingcart .carticon {display: none;}
-#shoppingcartbottom .cart_price {float: none;}
+#shoppingcartbottom .cart_price {float: none; }
 
 
 

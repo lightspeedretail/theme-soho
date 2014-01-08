@@ -22,7 +22,7 @@ input  { color: #eee;
   transition: all 0.3s ease-in-out;} 
 
 
-input:focus, input:hover { color: #eee; border: 10px solid #A2C90A; background-color: #A2C90A; }
+input:focus, input:hover { color: #eee; border: 10px solid #FEB800; background-color: #FEB800; }
 
 select, input[type="text"], input[type="password"], input[type="email"],input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus { color: #295A7F;  background-color: #3DC0DC;  }
 legend  {  color: #295A7F;  }
@@ -31,7 +31,14 @@ a{ color: #295A7F; -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;}
 a:hover {   color: #295A7F; }
-.darkbutton, .darkbutton a { background-color: #262626; color: #eee;  }
+.darkbutton a { background: #FEB800; color: #eee;  border: 1px solid #295A7F; border-radius: 10px; padding: 10px 15px; 
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;} }
+
+.darkbutton a:hover {background: #F6643C; }
+
 .lightbutton, .lightbutton a {  background-color: #7f7f7f; color: #eee; }
 .smalldarkbutton {  background-color: #262626; color: #eee; }
 .smalllightbutton {  background-color: #7f7f7f; color: #eee; }
@@ -62,7 +69,7 @@ a:hover {   color: #295A7F; }
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;}
 
-.mainMenuBtn a:hover {  color: #F43636; }
+.mainMenuBtn a:hover {  color: #FEB800; }
 
 
 #nav_products ul a { color: #eee; border-bottom: 1px dotted #cccccc;}
@@ -76,19 +83,28 @@ a:hover {   color: #295A7F; }
 .breadcrumbs a { color: #295A7F; }
 
 /***** Product Grid *****/
-.product_cell { border: 3px #F6FAFB solid; background: #295A7F;   
+.product_cell { border: 1px #295A7F solid; background: #fff;  
 	-webkit-transition: background 0.5s ease-in-out;
   -moz-transition: background 0.5s ease-in-out;
   -o-transition: background 0.5s ease-in-out;
   transition: background 0.5s ease-in-out;}
 
 
-.product_cell:hover { background: #A2C90A;}
-.product_cell_label  { color: #eee; background: #3DC0DC;}
+
+.product_cell:last-child { border-right: 2px #295A7F solid; }
+
+
+
+
+.product_cell:hover .product_cell_label { background: #FEB800;}
+.product_cell_label  { color: #eee; background: #3DC0DC;  -webkit-transition: background 0.5s ease-in-out;
+  -moz-transition: background 0.5s ease-in-out;
+  -o-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;}}
 .product_cell_label .product_cell_price_slash { color: #7f7f7f;}
 .product_cell a { color: #eee;}
 .product_cell_label a { color: #eee;}
-.product_cell_label .product_cell_price {color: #295A7F;}
+.product_cell_label .product_cell_price {color: #295A7F; font-size: 16px;}
 
 /***** Pagination *****/
 #pagination a {color: #888888;  }
@@ -97,16 +113,16 @@ a:hover {   color: #295A7F; }
 
 
 /***** Search Box *****/
-#searchentry .search_box input { color: #295A7F; border: 1px solid #A2C90A; background-color: #eee; padding: 6px; }
+#searchentry .search_box input { color: #295A7F; border: 1px solid #FEB800; background-color: #eee; padding: 6px; }
 #searchentry .searchTextBox .searched { color: #295A7F; }
 
 
 /***** Advanced Search Page *****/
 
-#advancedsearch input {border: 10px solid #3DC0DC;}
+#advancedsearch input {border: 10px solid #3DC0DC; }
 #advancedsearch input:focus {border: 10px solid #3DC0DC;}
 #advancedsearch #btnSubmit {border: 10px solid #3DC0DC; }
-#advancedsearch input#btnSubmit:hover {border: 10px solid #295A7F; }
+#advancedsearch input#btnSubmit:hover {border: 10px solid #FEB800; }
 
 /***** sidebar *****/
 
@@ -136,18 +152,19 @@ a:hover {   color: #295A7F; }
 #shoppingcarteditcart {  background-color: #7f7f7f; color: #eee;  }
 #shoppingcarteditcart .editlink a { color: #eee; }
     /* continue shopping button */
-#shoppingcartcontinue { background-color: #1277C9; color: #eee; border: 1px solid #295A7F;  min-width: 90px; margin-right: 40px;
+#shoppingcartcontinue { background-color: #1277C9; color: #eee;  min-width: 90px; 
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-#shoppingcartcontinue:hover { background-color: #F43636; color: #eee;  }
+#shoppingcartcontinue:hover { background-color: #F6643C; color: #eee;  }
 #shoppingcartcontinue  a { color: #295A7F;}
 #shoppingcartcontinue:hover a {color: #eee;}
 
 #ShoppingCart button {background-color: #3DC0DC; border: 10px solid #3DC0DC;}
+#ShoppingCart button:hover {background-color: #FEB800; border: 10px solid #FEB800;}
 
 /**** Generic Cart is used both on checkout and on the Edit Cart screen ****/
 #genericcart .cartdecor { color: #295A7F; }
@@ -160,7 +177,7 @@ a:hover {   color: #295A7F; }
 
 /***** Product Details Page *****/
 
-#product_details h1 {font-family: 'Pacifico', cursive;}
+/***** #product_details h1 {font-family: 'Pacifico', cursive;} *****/
 
 
 #product_details .price_reg { color: #555555;}
@@ -172,7 +189,7 @@ a:hover {   color: #295A7F; }
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;}
 
-#product_details .addcart:hover {background: #F43636; }
+#product_details .addcart:hover {background: #F6643C; }
 
 #product_details .addcart a {  color: #eee; }
 
@@ -205,7 +222,7 @@ a:hover {   color: #295A7F; }
 
 /***** Checkout page and Registration Page *****/
 #checkout legend, #contact-form legend, #orderdisplay legend  { color: #295A7F;  }
-#checkout .warning, #checkout .errorMessage, #contact-form .warning, #contact-form .errorMessage { color: #A285C5; }
+#checkout .warning, #checkout .errorMessage, #contact-form .warning, #contact-form .errorMessage { color: #F6643C; }
 #checkout input[type="text"], #checkout input[type="password"], #checkout input[type="email"], #checkout input[type="select"],#checkout input[type="text"]:focus,#checkout input[type="password"]:focus, #checkout input[type="email"]:focus, #checkout input[type="select"]:focus { padding: 6px; border: 1px dotted #295A7F;  }
 #contact-form input[type="text"], #contact-form input[type="password"], #contact-form input[type="email"], #contact-form input[type="select"],#contact-form input[type="text"]:focus,#contact-form input[type="password"]:focus, #contact-form input[type="email"]:focus, #contact-form input[type="select"]:focus { padding: 6px; border: 1px dotted #295A7F; }
 #checkout .red,#contact-form .red, .customer_reg_err_msg { color: #dd0000; }
@@ -213,7 +230,7 @@ a:hover {   color: #295A7F; }
 
 #checkout #PromoLabel { color: #007700; }
 
-.forgotpassword { color: #A285C5; }
+.forgotpassword { color: #F6643C; }
 
 #contact-form textarea { background-color: #3DC0DC; border: 1px dotted #295A7F;}
 
@@ -225,7 +242,7 @@ a:hover {   color: #295A7F; }
 
 #ContactForm_fromName, #ContactForm_contactSubject, #ContactForm_fromEmail, #ContactForm_contactBody {display: block;}
 
-#checkout textarea {background-color: #295A7F; border: 1px dotted #3B4250; }
+#checkout textarea {background-color: #3DC0DC; border: 1px dotted #3B4250; }
 
 
 /***** Messages from system *****/
@@ -234,7 +251,7 @@ a:hover {   color: #295A7F; }
 span.required { color: #A285C5; }
 
 /***** Order/SRO/Quote Display *****/
-#orderdisplay .cartlabel, #orderdisplay .label { background-color: #eee; color: black; }
+#orderdisplay .cartlabel, #orderdisplay .label { font-weight: bold; color: #3DC0DC; }
 #orderdisplay input[type="text"],#genericcart input[type="text"]:focus { background-color: #eee;border-bottom: 1px solid black; }
 
 #orderdisplay fieldset { border-bottom: 2px dotted #295A7F; }
@@ -243,15 +260,15 @@ span.required { color: #A285C5; }
 #wishlistdisplay .rowborder { border-bottom: 1px dotted #295A7F;}
 
 #wishlistdisplay .link .disabled {color: #cccccc; background-color: #eee;}
-#wishlistdisplay .addcart {  background-color: #262626; color: #eee; }
-#wishlistdisplay .addcart a { color: #eee;}
-#wishlistdisplay .sharelist { background-color: #7f7f7f; color: black; }
-#wishlistdisplay .sharelist a { color: #eee; }
+#wishlistdisplay .addcart  a { background: #FEB800; color: #eee; border: 1px solid #295A7F; border-radius: 10px; padding: 10px;}
+
+
+#wishlistdisplay .sharelist a  { background: #FEB800; color: #eee; border: 1px solid #295A7F; border-radius: 10px; padding: 10px;}
 
 #wishlistdisplay .editwish a { color: #eee; text-transform: uppercase; font-size: 0.8em;}
 
 #btnWishListDelete { background-color: #ff9c59;}
-#wishlistdisplay .btnDelete { background-color: #ff9c59;}
+#wishlistdisplay .btnDelete {}
 
 
 /***** Footy *****/
@@ -277,3 +294,18 @@ span.required { color: #A285C5; }
 .shoppingnavigation a, #login a, #shoppingcartbottom a {color: #3DC0DC; }
 
 }
+
+/****** share wishlist ******/
+
+.ui-widget-content, .ui-widget textarea { color: #295A7F; font-family: 'Karla', sans-serif; }
+
+#ShareForm_toName:focus, #ShareForm_toEmail:focus {border-color: #3DC0DC;}
+
+.ui-widget-header {
+border: 1px solid #295A7F;
+background: #3DC0DC;
+color: #eee;
+font-weight: bold;
+}
+
+input#ShareForm_toEmail:hover, input#ShareForm_toName:hover { border: 10px solid #3DC0DC; }
