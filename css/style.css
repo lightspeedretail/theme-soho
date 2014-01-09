@@ -280,7 +280,7 @@ li.mainMenuBtn {list-style-type: none; float: left; width: 19%;}
 
 .productImage {text-align: center;}
 .productImage legend {position: absolute; display: none;}
-.productImage img {border: 1px solid #3B4250; width: 258px; }
+.productImage img {border: 1px solid #3B4250; }
 
 #product_details .wishlist { padding: 5px 5px 5px 5px;  margin: 0 5px 0 0; text-align: center; cursor: pointer; float: left; height: 50px; width: 100px;}
 #product_details .wishlist a {   text-transform: uppercase; font-size: 1em; padding-top: 5px;}
